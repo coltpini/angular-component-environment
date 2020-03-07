@@ -1,0 +1,17 @@
+:host {
+  display: inline-block;
+  background: var(--purple);
+  color: var(--white);
+  padding: 0.3em 0.6em;
+  border-radius: 0.4em;
+  font-size: 0.8em;
+}
+
+:host[theme="light"] {
+  background: var(--grey);
+  color: var(--purple);
+}
+
+ali-icon {
+  cursor: pointer;
+}

@@ -1,0 +1,10 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+  --purple: #403E6C;
+  --grey: #F4F7F6;
+  --white: #fff;
+}
+
+body {
+  font-family: lato, 'open sans', sans-serif;
+}
