@@ -12,7 +12,9 @@ export default {
   ],
   parameters: {
     notes: `
-      # Pill (v1.0.0)
+      # Pill <ali-pill>
+      v1.0.0
+
       Used as a tag or other removable bit of text. This does not self remove but emits a remove event that can be used to remove it.
 
       ## inputs

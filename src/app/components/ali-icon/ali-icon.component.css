@@ -1,0 +1,12 @@
+:host {
+  vertical-align: middle;
+}
+
+svg {
+  height: 100%;
+  fill: var(--purple);
+}
+
+:host([theme="light"]) svg {
+  fill: var(--white);
+}

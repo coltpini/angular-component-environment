@@ -1,1 +1,5 @@
-<span>x</span>
+<svg *ngIf="icon" [attr.viewBox]="viewbox">
+  <title>{{icon.title}}</title>
+  <desc>{{icon.description}}</desc>
+  <path fill-rule="nonzero" [attr.d]="icon.path"></path>
+</svg>
