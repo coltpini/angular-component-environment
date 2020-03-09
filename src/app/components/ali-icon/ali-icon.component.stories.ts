@@ -26,7 +26,7 @@ export default {
 };
 
 const getTemplate = (isDark = false) =>
-  `<ali-icon style="${isDark ? `background: var(--purple);` : ``}height: 3em; padding: 1em;" [type]="type" [theme]="theme"></ali-icon>`;
+  `<ali-icon style="${isDark ? `background: var(--theme-100);` : ``}height: 3em; padding: 1em;" [type]="type" [theme]="theme"></ali-icon>`;
 
 export const closeIcon = () => ({
   component: AliIconComponent,

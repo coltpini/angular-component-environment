@@ -11,6 +11,8 @@
   --black-t: rgba(0,0,0,0.15);
 
   --shadow: 2px 2px 4px var(--black-t);
+
+  --theme-100: var(--purple);
 }
 
 body, input {

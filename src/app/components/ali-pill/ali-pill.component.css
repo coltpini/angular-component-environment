@@ -1,6 +1,6 @@
 :host {
   display: inline-block;
-  background: var(--purple);
+  background: var(--theme-100);
   color: var(--white);
   padding: 0.3em 0.6em;
   margin: 0 0.5em 0 0;
@@ -13,7 +13,7 @@
 
 :host[theme="light"] {
   background: var(--grey);
-  color: var(--purple);
+  color: var(--theme-100);
 }
 
 ali-icon {

@@ -6,7 +6,7 @@
 
 svg {
   height: 100%;
-  fill: var(--purple);
+  fill: var(--theme-100);
 }
 
 :host([theme="light"]) svg {

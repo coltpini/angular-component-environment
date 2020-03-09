@@ -2,6 +2,12 @@
   display: block;
 }
 
+label {
+  padding-bottom: 0.25em;
+  display: block;
+  color: var(--theme-100);
+}
+
 .container {
   border: 1px solid var(--grey-500);
   box-shadow: var(--shadow);
@@ -13,7 +19,7 @@
 
 .input {
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   flex-wrap: wrap;
   align-items: center;
   align-content: space-evenly;

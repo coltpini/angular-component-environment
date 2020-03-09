@@ -134,7 +134,7 @@ export const top = () => ({
   props: {
     value: ['one', 'two', 'three'],
     options: simpleData,
-    label: 'Simple Example',
+    label: 'Simple Label',
     placeholder: 'Search Text Entered'
   }
 });
