@@ -17,17 +17,16 @@ export default {
 
       ## inputs
         - **theme** ['light' | 'dark'] : Selects the theme of the pill in light or dark.
-        - **value** [string] : The value of the pill. It also displays on the pill.
-
-      ## outputs
-        - **remove** [string] : emits the remove event that passes the value of the pill.
+        - **type** string : The name of the icon to be used.
 
       ## future
-        - Allow an image to be displayed in the pill.
-        - More color variations than light and dark.
+        -
     `
   }
 };
+
+const getTemplate = (isDark = false) =>
+  `<ali-icon style="${isDark ? `background: var(--purple);` : ``}height: 3em; padding: 1em;" [type]="type" [theme]="theme"></ali-icon>`;
 
 export const closeIcon = () => ({
   component: AliIconComponent,
@@ -35,7 +34,7 @@ export const closeIcon = () => ({
     type: 'close',
     theme: 'dark'
   },
-  template: '<div style="padding:20px; width: 50%;"><ali-icon [type]="type" [theme]="theme"></ali-icon></div>'
+  template: getTemplate()
 });
 
 export const closeIconLight = () => ({
@@ -44,7 +43,7 @@ export const closeIconLight = () => ({
     type: 'close',
     theme: 'light',
   },
-  template: '<div style="padding:20px; background: var(--purple); width: 50%;"><ali-icon [type]="type" [theme]="theme"></ali-icon></div>'
+  template: getTemplate(true)
 });
 
 export const searchIcon = () => ({
@@ -53,7 +52,7 @@ export const searchIcon = () => ({
     type: 'search',
     theme: 'dark'
   },
-  template: '<div style="padding:20px; width: 50%;"><ali-icon [type]="type" [theme]="theme"></ali-icon></div>'
+  template: getTemplate()
 });
 
 export const classIcon = () => ({
@@ -63,5 +62,5 @@ export const classIcon = () => ({
     type: 'class',
     theme: 'dark'
   },
-  template: '<div style="padding:20px; width: 50%;"><ali-icon [type]="type" [theme]="theme"></ali-icon></div>'
+  template: getTemplate()
 });

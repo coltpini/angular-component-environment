@@ -1,5 +1,7 @@
 :host {
   vertical-align: middle;
+  display: inline-block;
+  height: 1em;
 }
 
 svg {

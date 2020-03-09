@@ -1,10 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
 :root {
+
+  --grey-300: #F4F7F6;
+  --grey-400:#F4F7F6;
+  --grey-500: #DDDFE3;
+
   --purple: #403E6C;
-  --grey: #F4F7F6;
+  --grey: var(--grey-300);
   --white: #fff;
+  --black-t: rgba(0,0,0,0.15);
+
+  --shadow: 2px 2px 4px var(--black-t);
 }
 
-body {
+body, input {
   font-family: lato, 'open sans', sans-serif;
+  font-size: 16px;
 }
+
+input::placeholder {
+  color: var(--grey-500);
+}
+

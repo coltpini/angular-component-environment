@@ -1,0 +1,13 @@
+<label>{{label}}</label>
+<div class="container">
+  <div class="input">
+    <ali-pill *ngFor="let item of value" [value]="item"></ali-pill>
+    <input type="text" [placeholder]="options.length === 0 ? placeholder : ''" />
+  </div>
+  <ali-icon type="search" theme="dark"></ali-icon>
+</div>
+<ali-revealing-panel expanded fill trim>
+  <ul *ngFor="let option of options">
+    <ali-list-item [value]="option"></ali-list-item>
+  </ul>
+</ali-revealing-panel>

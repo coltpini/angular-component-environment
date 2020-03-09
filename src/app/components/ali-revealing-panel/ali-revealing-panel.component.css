@@ -1,0 +1,34 @@
+:host {
+  display: block;
+  overflow: hidden;
+  height: 0;
+  background: var(--white);
+}
+
+/*
+I think it is better to let the consumer take care of the margins in this case.
+:host ::ng-deep > *:first-child {
+  margin-top: 0;
+}
+
+:host ::ng-deep > *:last-child {
+  margin-bottom: 0;
+}
+*/
+
+
+
+:host([aria-expanded]) {
+  box-shadow: var(--shadow);
+  border: 1px solid var(--grey-500);
+  height: auto;
+  padding: 1em;
+}
+
+:host([fill]) {
+  padding: 0;
+}
+
+:host([trim]) {
+  border-top: none;
+}

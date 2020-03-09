@@ -1,0 +1,16 @@
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0.8em 1em;
+  color: var(--purple);
+  cursor: pointer;
+  --active: var(--grey-400);
+}
+
+li.active {
+  background: var(--active);
+}
+
+li:hover {
+  background: var(--active);
+}

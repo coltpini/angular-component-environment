@@ -7,7 +7,8 @@ import { Component, Input, Output, EventEmitter, OnChanges, SimpleChanges, HostB
 })
 
 export class AliPillComponent implements OnChanges {
-  @HostBinding('attr.theme') private pillTheme = 'dark';
+  @HostBinding('attr.theme') private attrTheme = 'dark';
+
   @Input() theme: 'light' | 'dark';
   @Input() value: string;
 
@@ -18,8 +19,10 @@ export class AliPillComponent implements OnChanges {
   constructor() { }
 
   ngOnChanges(changes: SimpleChanges) {
-    this.iconTheme = changes.theme.currentValue === 'light' ? 'dark' : 'light';
-    this.pillTheme = changes.theme.currentValue;
+    if (changes.theme) {
+      this.iconTheme = changes.theme.currentValue === 'light' ? 'dark' : 'light';
+      this.attrTheme = changes.theme.currentValue;
+    }
   }
 
   handleRemove() {
