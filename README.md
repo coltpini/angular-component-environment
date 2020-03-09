@@ -4,7 +4,7 @@
 
 This is using storybook use `npm run storybook` to see the components.
 
-
+To see the component API, usage notes, and release notes hit the "notes" tab in storybook.
 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.5.
