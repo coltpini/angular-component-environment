@@ -1,11 +1,13 @@
 # AngularComponentEnvironment
 
-![breakdown](https://raw.githubusercontent.com/coltpini/angular-component-environment/master/Breakdown.jpg)
-
 This is using storybook use `npm run storybook` to see the components.
 
 To see the component API, usage notes, and release notes hit the "notes" tab in storybook.
 
+![breakdown](https://raw.githubusercontent.com/coltpini/angular-component-environment/master/Breakdown.jpg)
+
+
+# Angular Notes
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.5.
 
