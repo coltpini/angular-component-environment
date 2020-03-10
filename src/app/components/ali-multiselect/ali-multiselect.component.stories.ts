@@ -135,7 +135,8 @@ export const top = () => ({
     value: ['one', 'two', 'three'],
     options: simpleData,
     label: 'Simple Label',
-    placeholder: 'Search Text Entered'
+    placeholder: 'Search Text Entered',
+    change: action('changed')
   }
 });
 

@@ -1,13 +1,14 @@
 <label>{{label}}</label>
-<div class="container">
+<div class="container" (click)="focusInput()">
   <div class="input">
-    <ali-pill *ngFor="let item of value" [value]="item"></ali-pill>
-    <input type="text" [placeholder]="options.length === 0 ? placeholder : ''" />
+    <ali-pill *ngFor="let item of value" [value]="item" (click)="cancelFocus($event)" (remove)="handleRemove(item)">
+    </ali-pill>
+    <input type="text" [placeholder]="options.length === 0 ? placeholder : ''" #input />
   </div>
   <ali-icon type="search" theme="dark"></ali-icon>
 </div>
 <ali-revealing-panel expanded fill trim>
   <ul *ngFor="let option of options">
-    <ali-list-item [value]="option"></ali-list-item>
+    <ali-list-item (click)="handleAdd(option)" [value]="option"></ali-list-item>
   </ul>
 </ali-revealing-panel>
