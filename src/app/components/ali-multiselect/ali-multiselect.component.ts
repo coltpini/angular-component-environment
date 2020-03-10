@@ -29,11 +29,17 @@ export class AliMultiselectComponent implements OnChanges {
   }
 
   filterOptions() {
-    let list = this.options;
+    let filter;
     if (this.input) {
-      list = this.options.filter(option => option.indexOf(this.input.nativeElement.value) > -1);
+      filter = this.input.nativeElement.value;
     }
-    list = list.filter(option => !this.value.reduce((flag, val) => flag || option === val, false));
+    const list = this.options.filter(option => {
+      const l = [];
+      if (filter && option.toLowerCase().indexOf(filter.toLowerCase()) === -1) {
+        return false;
+      }
+      return !this.value.reduce((flag, val) => flag || option === val, false);
+    });
     this.optionsList = list;
   }
 
