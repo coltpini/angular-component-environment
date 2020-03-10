@@ -3,12 +3,12 @@
   <div class="input">
     <ali-pill *ngFor="let item of value" [value]="item" (click)="cancelFocus($event)" (remove)="handleRemove(item)">
     </ali-pill>
-    <input type="text" [placeholder]="options.length === 0 ? placeholder : ''" #input />
+    <input type="text" (keyup)="filterOptions()" [placeholder]="options.length === 0 ? placeholder : ''" #input />
   </div>
   <ali-icon type="search" theme="dark"></ali-icon>
 </div>
 <ali-revealing-panel expanded fill trim>
-  <ul *ngFor="let option of options">
+  <ul *ngFor="let option of optionsList">
     <ali-list-item (click)="handleAdd(option)" [value]="option"></ali-list-item>
   </ul>
 </ali-revealing-panel>

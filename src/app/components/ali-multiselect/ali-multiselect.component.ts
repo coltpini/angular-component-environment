@@ -13,11 +13,28 @@ export class AliMultiselectComponent implements OnChanges {
   @Input() label: string;
   @Input() placeholder: string;
 
+  private optionsList: string[];
+
   @Output() change = new EventEmitter<string[]>();
 
   constructor() { }
 
   ngOnChanges(changes: SimpleChanges) {
+    if (changes.options) {
+      this.optionsList = changes.options.currentValue;
+    }
+    if (changes.options || changes.value) {
+      this.filterOptions();
+    }
+  }
+
+  filterOptions() {
+    let list = this.options;
+    if (this.input) {
+      list = this.options.filter(option => option.indexOf(this.input.nativeElement.value) > -1);
+    }
+    list = list.filter(option => !this.value.reduce((flag, val) => flag || option === val, false));
+    this.optionsList = list;
   }
 
   focusInput() {
@@ -44,6 +61,9 @@ export class AliMultiselectComponent implements OnChanges {
   }
 
   handleChange() {
+    this.filterOptions();
     this.change.emit(this.value);
   }
+
+
 }
