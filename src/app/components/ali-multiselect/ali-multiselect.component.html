@@ -4,7 +4,7 @@
     <ali-pill *ngFor="let item of value" [value]="item" (click)="cancelFocus($event)" (remove)="handleRemove(item)">
     </ali-pill>
     <input type="text" (keyup)="filterOptions()" (blur)="onBlur($event)"
-      [placeholder]="options.length === 0 ? placeholder : ''" #input />
+      [placeholder]="value.length === 0 ? placeholder : ''" #input />
   </div>
   <ali-icon type="search" theme="dark"></ali-icon>
 </div>

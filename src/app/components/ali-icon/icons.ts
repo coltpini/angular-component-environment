@@ -1,4 +1,3 @@
-
 export interface Icon {
   path: string;
   height: number;

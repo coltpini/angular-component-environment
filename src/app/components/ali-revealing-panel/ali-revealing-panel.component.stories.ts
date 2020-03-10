@@ -1,6 +1,4 @@
-
 import { moduleMetadata } from '@storybook/angular';
-import { action } from '@storybook/addon-actions';
 import { AliRevealingPanelComponent } from './ali-revealing-panel.component';
 
 export default {
@@ -15,11 +13,17 @@ export default {
       # Revealing Panel <ali-revealing-panel>
       v1.0.0
 
+      A panel that can be shown and hidden.
+
       ## inputs
-        - **position** ['top' | 'left' | 'bottom' | 'right'] : Selects the position where the panel will be attached to and where it will reveal from.
+        - **fill** [boolean] : Removes the default padding on the panel container.
+        - **expanded** [boolean] : Expands or contracts the panel (aria enabled).
+        - **trim** [boolean] : trims the connecting border so the panel appears to sit flush.
 
       ## future
-        -
+        - **position** ['top' | 'left' | 'bottom' | 'right'] : Selects the position where the panel will be attached to and where it will reveal from.
+        - trim will trim the border corresponding to the position of the panel.
+        - ability to animate the open and close.
     `
   }
 };

@@ -1,5 +1,4 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { AliPillComponent } from './ali-pill.component';
 
 describe('AliPillComponent', () => {
@@ -8,9 +7,9 @@ describe('AliPillComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AliPillComponent ]
+      declarations: [AliPillComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

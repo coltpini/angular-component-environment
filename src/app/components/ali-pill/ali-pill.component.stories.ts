@@ -15,14 +15,14 @@ export default {
       # Pill <ali-pill>
       v1.0.0
 
-      Used as a tag or other removable bit of text. This does not self remove but emits a remove event that can be used to remove it.
+      Used as a tag or other removable bit of text.
 
       ## inputs
-        - **theme** ['light' | 'dark'] : Selects the theme of the pill in light or dark.
+        - **theme** ['light' | 'dark'] : Selects the theme of the pill in light or dark. Default is light.
         - **value** [string] : The value of the pill. It also displays on the pill.
 
       ## outputs
-        - **remove** [string] : emits the remove event that passes the value of the pill.
+        - **remove** [string] : emits the remove event that passes the value of the pill. This does not self remove but emits a remove event that can be used to remove it.
 
       ## future
         - Allow an image to be displayed in the pill.

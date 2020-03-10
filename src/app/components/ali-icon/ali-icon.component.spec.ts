@@ -1,5 +1,4 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { AliIconComponent } from './ali-icon.component';
 
 describe('AliIconComponent', () => {
@@ -8,9 +7,9 @@ describe('AliIconComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AliIconComponent ]
+      declarations: [AliIconComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

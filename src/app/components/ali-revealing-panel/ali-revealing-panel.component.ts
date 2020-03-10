@@ -1,4 +1,10 @@
-import { Component, Input, Output, EventEmitter, OnChanges, SimpleChanges, HostBinding } from '@angular/core';
+import {
+  Component,
+  Input,
+  OnChanges,
+  SimpleChanges,
+  HostBinding
+} from '@angular/core';
 
 @Component({
   selector: 'ali-revealing-panel',

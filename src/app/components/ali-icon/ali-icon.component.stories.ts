@@ -17,10 +17,12 @@ export default {
 
       ## inputs
         - **theme** ['light' | 'dark'] : Selects the theme of the pill in light or dark.
-        - **type** string : The name of the icon to be used.
+        - **type** [string] : The name of the icon to be used.
 
       ## future
-        -
+        - add more icons.
+        - show icon list with names as a first story.
+        - add more colors.
     `
   }
 };

@@ -1,4 +1,10 @@
-import { Component, OnInit, Input, OnChanges, SimpleChanges, HostBinding } from '@angular/core';
+import {
+  Component,
+  Input,
+  OnChanges,
+  SimpleChanges,
+  HostBinding
+} from '@angular/core';
 import { Icon, getIcon } from './icons';
 
 @Component({

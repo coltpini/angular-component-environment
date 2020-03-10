@@ -54,6 +54,7 @@ export class AliMultiselectComponent implements OnChanges {
   }
 
   onBlur(e) {
+    // TODO: make it so that blur closes panel
     // this.showResults = false;
   }
 

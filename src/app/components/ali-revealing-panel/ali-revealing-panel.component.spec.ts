@@ -1,5 +1,4 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { AliRevealingPanelComponent } from './ali-revealing-panel.component';
 
 describe('AliPillComponent', () => {
