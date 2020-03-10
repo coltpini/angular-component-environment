@@ -22,8 +22,8 @@ export class AliMultiselectComponent implements OnChanges {
   @Input() label: string;
   @Input() placeholder: string;
 
-  private optionsList: string[];
-  private showResults = false;
+  optionsList: string[];
+  showResults = false;
 
   @Output() change = new EventEmitter<string[]>();
 
