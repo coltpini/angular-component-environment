@@ -32,7 +32,7 @@ export default {
     `
   }
 };
-const simpleData = ['Match 1', 'Match 2', 'Match 3', 'Match 4', 'Match 5'];
+const simpleData = ['Match set 1', 'Match set 2', 'Match 3', 'Match set 4', 'Match 5'];
 const complexData = [];
 
 /*

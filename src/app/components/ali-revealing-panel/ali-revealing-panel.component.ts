@@ -23,7 +23,7 @@ export class AliRevealingPanelComponent implements OnChanges {
       this.attrFill = changes.fill.currentValue;
     }
     if (changes.expanded) {
-      this.attrExpanded = changes.expanded.currentValue;
+      this.attrExpanded = changes.expanded.currentValue || undefined;
     }
     if (changes.trim) {
       this.attrTrim = changes.trim.currentValue;

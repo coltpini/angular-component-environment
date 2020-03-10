@@ -1,4 +1,13 @@
-import { Component, Input, Output, EventEmitter, OnChanges, SimpleChanges, HostBinding, ViewChild, ElementRef } from '@angular/core';
+import {
+  Component,
+  Input,
+  Output,
+  EventEmitter,
+  OnChanges,
+  SimpleChanges,
+  ViewChild,
+  ElementRef
+} from '@angular/core';
 
 @Component({
   selector: 'ali-multiselect',
@@ -14,6 +23,7 @@ export class AliMultiselectComponent implements OnChanges {
   @Input() placeholder: string;
 
   private optionsList: string[];
+  private showResults = false;
 
   @Output() change = new EventEmitter<string[]>();
 
@@ -43,9 +53,15 @@ export class AliMultiselectComponent implements OnChanges {
     this.optionsList = list;
   }
 
+  onBlur(e) {
+    // this.showResults = false;
+  }
+
   focusInput() {
+    this.showResults = true;
     this.input.nativeElement.focus();
   }
+
   cancelFocus(e) {
     e.stopPropagation();
     e.preventDefault();
@@ -62,14 +78,15 @@ export class AliMultiselectComponent implements OnChanges {
   handleAdd(value) {
     if (this.value.findIndex(val => val === value) === -1) {
       this.value.push(value);
+      this.input.nativeElement.value = '';
       this.handleChange();
     }
   }
 
   handleChange() {
+    this.showResults = false;
     this.filterOptions();
     this.change.emit(this.value);
   }
-
 
 }
